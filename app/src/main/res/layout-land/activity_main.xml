@@ -3,81 +3,72 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="20dp"
+    android:orientation="horizontal"
+    android:padding="16dp"
     android:background="#F8F9FA">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Katalog Film &amp; Series"
-        android:textSize="26sp"
-        android:textStyle="bold"
-        android:textColor="#212529"
-        android:layout_marginBottom="20dp"/>
-
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginBottom="16dp">
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:paddingEnd="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Katalog Film"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="#212529"
+            android:layout_marginBottom="16dp"/>
 
         <EditText
             android:id="@+id/inputCari"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:layout_weight="1"
-            android:hint="Masukkan judul film..."
+            android:hint="Cari judul film..."
             android:background="@android:drawable/edit_text"
             android:paddingStart="16dp"
             android:paddingEnd="16dp"
             android:inputType="text"
-            android:maxLines="1"/>
+            android:layout_marginBottom="12dp"/>
 
         <Button
             android:id="@+id/btnCari"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:text="Cari"
+            android:text="Cari Film"
             android:backgroundTint="#0D6EFD"
             android:textColor="#FFFFFF"
-            android:layout_marginStart="8dp"/>
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginBottom="20dp">
+            android:layout_marginBottom="16dp"/>
 
         <Button
             android:id="@+id/btnSortAZ"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:text="Urutkan A - Z"
-            android:layout_marginEnd="4dp"
             style="?android:attr/buttonBarButtonStyle"
             android:backgroundTint="#E9ECEF"
-            android:textColor="#495057"/>
+            android:textColor="#495057"
+            android:layout_marginBottom="8dp"/>
 
         <Button
             android:id="@+id/btnSortZA"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:text="Urutkan Z - A"
-            android:layout_marginStart="4dp"
             style="?android:attr/buttonBarButtonStyle"
             android:backgroundTint="#E9ECEF"
             android:textColor="#495057"/>
     </LinearLayout>
 
     <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:scrollbars="vertical">
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1.5"
+        android:background="#FFFFFF"
+        android:padding="8dp">
 
         <LinearLayout
             android:id="@+id/wadahListFilm"
