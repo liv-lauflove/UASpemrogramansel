@@ -154,21 +154,22 @@ Gunakan nama file di bawah ini agar gambar otomatis tampil di README.
 
 ### A. Tampilan Utama
 
-| Home Screen | Search Result |
-|---|---|
-| ![Home Screen]() | ![Search Result](docs/search-result.png) |
+| Home Screen | Search Result | Home Screen Landscape |
+|---|---|---|
+| ![Home Screen](docs/home-screen.jpeg) | ![Search Result](docs/search-result.jpeg) | ![Landscape](docs/landscape.jpeg) |
+
 
 ### B. Sorting Data
 
 | Sort A-Z | Sort Z-A |
 |---|---|
-| ![Sort AZ](docs/sort-az.png) | ![Sort ZA](docs/sort-za.png) |
+| ![Sort AZ](docs/sort-az.jpeg) | ![Sort ZA](docs/sort-za.jpeg) |
 
 ### C. Detail & Logcat
 
 | Detail Film | Logcat Evidence |
 |---|---|
-| ![Detail Screen](docs/detail-screen.png) | ![Logcat](docs/logcat.png) |
+| ![Detail Screen](docs/detail-screen.jpeg) | ![Logcat](docs/logcat.jpeg) |
 
 > Jika gambar belum muncul, pastikan folder `docs/` berada sejajar dengan file `README.md`.
 
