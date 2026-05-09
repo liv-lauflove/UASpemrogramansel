@@ -2,6 +2,7 @@ package com.example.listfilm
 
 import android.os.Bundle
 import android.util.Log
+import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -23,10 +24,16 @@ class DetailActivity : AppCompatActivity() {
             val tahun = intent.getIntExtra("EXTRA_TAHUN", 0)
             val rating = intent.getDoubleExtra("EXTRA_RATING", 0.0)
             val sinopsis = intent.getStringExtra("EXTRA_SINOPSIS") ?: "Sinopsis Kosong"
+            val poster = intent.getIntExtra("EXTRA_POSTER", 0)
 
             findViewById<TextView>(R.id.tvDetailJudul).text = judul
             findViewById<TextView>(R.id.tvDetailSub).text = "$genre • $tahun • ⭐$rating"
             findViewById<TextView>(R.id.tvDetailSinopsis).text = sinopsis
+
+            val imgDetailPoster = findViewById<ImageView>(R.id.imgDetailPoster)
+            if (poster != 0) {
+                imgDetailPoster.setImageResource(poster)
+            }
 
             Log.d(tagNIM, "Sukses menampilkan detail: $judul")
 

@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
 import android.widget.Toast
@@ -106,6 +107,9 @@ class MainActivity : AppCompatActivity() {
             viewKartu.findViewById<TextView>(R.id.tvGenre).text = "Genre: ${film.genre}"
             viewKartu.findViewById<TextView>(R.id.tvTahun).text = "Rilis: ${film.releaseYear}"
 
+            val imgPoster = viewKartu.findViewById<ImageView>(R.id.imgPoster)
+            imgPoster.setImageResource(film.poster)
+
             // Pindah Halaman dengan pengaman Try-Catch
             viewKartu.setOnClickListener {
                 try {
@@ -116,6 +120,7 @@ class MainActivity : AppCompatActivity() {
                     intent.putExtra("EXTRA_TAHUN", film.releaseYear)
                     intent.putExtra("EXTRA_RATING", film.rating)
                     intent.putExtra("EXTRA_SINOPSIS", film.synopsis)
+                    intent.putExtra("EXTRA_POSTER", film.poster)
                     startActivity(intent)
                 } catch (e: Exception) {
                     Log.e(tagNIM, "Error saat pindah halaman: ${e.message}")
